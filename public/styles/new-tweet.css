@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.counter {
+    float: right;
+
+}
+#tweet-text {
+  border: 0;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border-bottom: 2px solid black;
+
+}
+.Tweet {
+    margin-top: 4px;
+    font-family: 'Bungee', cursive;
+    
+}
+button {
+    background-color:  #4056A1;
+    color: white;
+}
