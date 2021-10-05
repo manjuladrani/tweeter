@@ -9,6 +9,7 @@ form {
 }
 #tweet-text {
   border: 0;
+  font: bold;
   background-color: transparent;
   resize: none;
   outline: none;
