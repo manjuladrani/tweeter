@@ -26,6 +26,20 @@ html {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- nav {
+ /* nav {
   font-family: 'Bungee', cursive;
+} */
+
+main.container {
+
+  font-style: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-right: 4em;
+  padding-left: 4em;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+
+
 }
+

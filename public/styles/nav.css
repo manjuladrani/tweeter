@@ -2,6 +2,14 @@
 nav {
     height: 120px;
     color: #FFFFFF;
+    font-size: larger;
     background-color: #4056A1;
+    font-family: 'Bungee', cursive;
+    width: 100%;
+    padding-top: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    display: flex;
+    justify-content: space-between;
 
 }
