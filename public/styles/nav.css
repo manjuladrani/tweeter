@@ -13,3 +13,17 @@ nav {
     justify-content: space-between;
 
 }
+
+.Hello {
+    font-family: 'Source Sans Pro';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#write {
+    font-family:'Source Sans Pro';
+    font-weight: bold;
+}
+.icon {
+    font-size: large;
+}
