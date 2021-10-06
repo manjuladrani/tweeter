@@ -18,7 +18,7 @@ html {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  
+  padding-bottom: 10px;
   font-family: 'Source Sans Pro', sans-serif;
 
 }
@@ -39,6 +39,6 @@ main.container {
   width: 90%;
   margin: auto;
   flex-direction: column;
-
+  padding-bottom: 20px;
 }
 
