@@ -1,4 +1,5 @@
 .nav-header {
+    
     height: 400px;
     width: 100%;;
     background-color:  #DAA520;
@@ -10,7 +11,8 @@
 }
 
 #avatar {
-    display: flex;    
+  padding-top: 40px;
+  display: flex;    
   align-items: center;
   justify-content: center;
   flex-direction: column;
