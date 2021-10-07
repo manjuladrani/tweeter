@@ -29,3 +29,10 @@ button {
 .redcounter {
     color: red;
 }
+
+.validationMessage {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #F00; 
+    display: inline;
+}

@@ -3,8 +3,15 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 $(() => { // same as $(document).ready(() => {})
 
+    
     function loadTweets() {
         console.log("inside load tweets");
         $.ajax({
@@ -19,7 +26,7 @@ $(() => { // same as $(document).ready(() => {})
         })
     }
     loadTweets();
-
+    
 
     const createTweetElement = function (tweet) { 
         
@@ -29,6 +36,7 @@ $(() => { // same as $(document).ready(() => {})
             <div class="photo">
               <img src= ${tweet.user.avatars}>
               <span>${tweet.user.name}</span>
+              
             </div>
             <div class="name">
               <p>${tweet.user.handle}</p>
@@ -36,7 +44,7 @@ $(() => { // same as $(document).ready(() => {})
           </header>
           
           <div class="message">
-            <p>${tweet.content.text}</p>
+            <p>${escape(tweet.content.text)}</p>
           </div>
           <footer>
             <span>${jQuery.timeago(tweet.created_at)}</span>
@@ -48,10 +56,13 @@ $(() => { // same as $(document).ready(() => {})
           </div>
           </footer>
         </article>`;
+        
         return markup;
-
+        
+  
+    
+    
     };
-   
     
     const renderTweets = function(tweets) {
       // loops through tweets
@@ -61,7 +72,7 @@ $(() => { // same as $(document).ready(() => {})
       for( let tweet of tweets) {
         $('#tweets-container').append(createTweetElement(tweet));
       }
-
+      
     }
     
     
@@ -70,9 +81,9 @@ $(() => { // same as $(document).ready(() => {})
         event.preventDefault();
         let charCount = $("#tweet-text").val().length;
         if (charCount === 0) {
-            alert($('#error') + "You need letters to tweet");
+            alert("You need letters ot words to tweet");
         } else if (charCount > 140){
-            alert($('error') + "Too many letters");
+            alert("Too many words to tweet");
         } else {
             console.log($( this ).serialize());
             const serializedData = $(this).serialize();
@@ -83,6 +94,9 @@ $(() => { // same as $(document).ready(() => {})
                 $("#tweet-text").val("");
 
             });
+        }
+        if (charCount > 140) {
+            alert("Too long,please gove not more than 140 letters");
         }
     })
 

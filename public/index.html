@@ -26,7 +26,6 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="composer-char-counter.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous"></script>
    
 16:25
@@ -56,6 +55,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <ul><li><span class="validationMessage"
+          data-bind="validationMessage: firstName" ></li>
+   <li><span class="validationMessage"
+          data-bind="validationMessage: lastName" ></li>
+</ul>
         <h2>Compose Tweet</h2>
         <form id ="tweet-form" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
