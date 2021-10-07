@@ -30,9 +30,16 @@ button {
     color: red;
 }
 
-.validationMessage {
+#error {
+    margin-top: 10px;
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    border: 1px solid red;
     color: #F00; 
-    display: inline;
+    display: flex;
+    height: 45px;
+    width: 70%;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+
 }

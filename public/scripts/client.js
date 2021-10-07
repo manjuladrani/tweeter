@@ -9,8 +9,10 @@ const escape = function (str) {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-$(() => { // same as $(document).ready(() => {})
 
+
+$(() => { // same as $(document).ready(() => {})
+    
     
     function loadTweets() {
         console.log("inside load tweets");
@@ -26,8 +28,8 @@ $(() => { // same as $(document).ready(() => {})
         })
     }
     loadTweets();
+   $("#error").hide();
     
-
     const createTweetElement = function (tweet) { 
         
         let markup = `
@@ -81,9 +83,13 @@ $(() => { // same as $(document).ready(() => {})
         event.preventDefault();
         let charCount = $("#tweet-text").val().length;
         if (charCount === 0) {
-            alert("You need letters ot words to tweet");
+            $(".displayerror").text("You need letters ot words to tweet");
+            $("#error").slideDown();
+            //alert("You need letters ot words to tweet");
         } else if (charCount > 140){
-            alert("Too many words to tweet");
+            $(".displayerror").text("Too many words to tweet");
+            $("#error").slideDown();
+            //alert("Too many words to tweet");
         } else {
             console.log($( this ).serialize());
             const serializedData = $(this).serialize();
@@ -95,9 +101,7 @@ $(() => { // same as $(document).ready(() => {})
 
             });
         }
-        if (charCount > 140) {
-            alert("Too long,please gove not more than 140 letters");
-        }
+        
     })
 
 

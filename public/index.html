@@ -55,23 +55,31 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <ul><li><span class="validationMessage"
-          data-bind="validationMessage: firstName" ></li>
-   <li><span class="validationMessage"
-          data-bind="validationMessage: lastName" ></li>
-</ul>
+        <div id="error">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span class="displayerror"></span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+          
         <h2>Compose Tweet</h2>
         <form id ="tweet-form" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
+          
           <textarea name="text" id="tweet-text"></textarea>
           <div class="Tweet">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
+            
           </div>
         </form>
         <section id="tweets-container">
       
         <!-- <article class="exist-tweet">
+
+          <input type="number"id="tweet-text"aria-describedby="error" value>"140" />
+            <span id="error">Too long,please give not more than 140 letters</span>
+
+            
           <header class="head">
             <div class="photo">
               <img src="http://i.imgur.com/73hZDYK.png">
