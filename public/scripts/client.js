@@ -68,14 +68,22 @@ $(() => { // same as $(document).ready(() => {})
     $("#tweet-form").submit(function (event) {
         console.log('event');
         event.preventDefault();
-        console.log($( this ).serialize());
-        const serializedData = $(this).serialize();
+        let charCount = $("#tweet-text").val().length;
+        if (charCount === 0) {
+            alert($('#error') + "You need letters to tweet");
+        } else if (charCount > 140){
+            alert($('error') + "Too many letters");
+        } else {
+            console.log($( this ).serialize());
+            const serializedData = $(this).serialize();
 
-        $.post("/tweets", serializedData, (response) => {
-            console.log("before calling");
-            loadTweets();
-            console.log("Tweet");
-        });
+            $.post("/tweets", serializedData, (response) => {
+                //console.log("before calling");
+                loadTweets();
+                $("#tweet-text").val("");
+
+            });
+        }
     })
 
 
