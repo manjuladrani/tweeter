@@ -10,6 +10,8 @@ $(() => { // same as $(document).ready(() => {})
     //    const $header = $("<header>").addClass("head");
     //    const $photo = $("<div>").addClass("photo");
     //    const $
+
+
     let markup = `
          <article class="exist-tweet">
           <header >
@@ -27,6 +29,7 @@ $(() => { // same as $(document).ready(() => {})
           </div>
           <footer>
             <span>${jQuery.timeago(tweet.created_at)}</span>
+
             <div class="iconcontainer">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -102,7 +105,7 @@ $(() => { // same as $(document).ready(() => {})
 
 
 
-      }
+        }
 
     }
     
@@ -114,5 +117,15 @@ $(() => { // same as $(document).ready(() => {})
     
     renderTweets(data);
     
+    $("#tweet-form").submit(function (event) {
+        console.log('event');
+        event.preventDefault();
+        console.log($( this ).serialize());
+        const serializedData = $(this).serialize();
+
+        $.post("/tweets", serializedData, (response) => {
+            console.log(response);
+        });
+    })
     
 });  
