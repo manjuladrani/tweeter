@@ -24,4 +24,5 @@ This repository is the starter code for the project: Students will fork and clon
 screenshot of desktop mode: https://github.com/manjuladrani/tweeter/blob/master/docs/Desktop-mode.png
 screenshot of tablet mode: https://github.com/manjuladrani/tweeter/blob/master/docs/Tablet-mode.png
 screenshot with too many words: https://github.com/manjuladrani/tweeter/blob/master/docs/tweetingwithmanywords.png
-screenshot with no words: https://github.com/manjuladrani/tweeter/blob/master/docs/tweetingwithnowords.png 
+screenshot with no words: https://github.com/manjuladrani/tweeter/blob/master/docs/tweetingwithnowords.png
+screenshot of tweeting: https://github.com/manjuladrani/tweeter/blob/master/docs/tweetinn.png 
