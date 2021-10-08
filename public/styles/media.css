@@ -1,4 +1,4 @@
-@media only screen and (max-width:1024px){  
+/* @media only screen and (max-width:1024px){  
     
     body {
         
@@ -18,7 +18,7 @@
       flex-wrap: wrap;
     }
     nav {
-      /* position: fixed;   */
+      
       background: #DAA520;
       background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 
@@ -36,5 +36,18 @@
 
 }
 
+*/
 
+@media only screen and (min-width:1024px){
 
+  body {
+    display: flex;
+    padding-top: 50 px;
+  }
+ header {
+   width: 50%;
+   /* padding: 20px; */
+   
+ }
+
+}
