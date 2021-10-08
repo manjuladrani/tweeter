@@ -1,0 +1,40 @@
+@media only screen and (max-width:1024px){  
+    
+    body {
+        
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        align-items: center;
+    }
+    header {
+      width: 100%;
+      top: 0;
+      height: 200px;
+      padding: 5px;
+      padding-top: 0px;
+      margin-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav {
+      /* position: fixed;   */
+      background: #DAA520;
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+
+
+    }
+
+    
+    container {
+        margin: 2px;
+        padding-left: 3em;
+        width: 100%;
+
+    }
+    
+
+}
+
+
+

@@ -1,8 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+/* defining escape function*/
 
 const escape = function (str) {
     let div = document.createElement("div");
@@ -13,7 +9,8 @@ const escape = function (str) {
 
 $(() => { // same as $(document).ready(() => {})
     
-    
+    /*The loadTweets function is defined here: It is an ajax GET request and takes the tweets as a JSON object and places them in the body of the response*/
+
     function loadTweets() {
         console.log("inside load tweets");
         $.ajax({
@@ -28,8 +25,10 @@ $(() => { // same as $(document).ready(() => {})
         })
     }
     loadTweets();
-   $("#error").hide();
-    
+    $("#error").hide();
+
+
+    /* The CreateTweetElement function is defined here: takes the body of the tweet from the form and renders it to the tweet container*/
     const createTweetElement = function (tweet) { 
         
         let markup = `
@@ -65,37 +64,36 @@ $(() => { // same as $(document).ready(() => {})
     
     
     };
-    
+
+    /*The renderTweets function is defined here: Loops through the array of tweets in the database and renders them to the 'tweets' class going from newest to oldest.The createTweetElement function is called for each tweet to be rendered*/
     const renderTweets = function(tweets) {
-      // loops through tweets
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
+      
       $('#tweets-container').empty();
       for( let tweet of tweets) {
         $('#tweets-container').append(createTweetElement(tweet));
       }
       
     }
-    
+    /* tweet form submission */ 
     
     $("#tweet-form").submit(function (event) {
         console.log('event');
         event.preventDefault();
         let charCount = $("#tweet-text").val().length;
         if (charCount === 0) {
-            $(".displayerror").text("You need letters ot words to tweet");
+            $(".displayerror").text("You need letters to tweet");
             $("#error").slideDown();
-            //alert("You need letters ot words to tweet");
+            
         } else if (charCount > 140){
             $(".displayerror").text("Too many words to tweet");
             $("#error").slideDown();
-            //alert("Too many words to tweet");
+            
         } else {
             console.log($( this ).serialize());
             const serializedData = $(this).serialize();
 
             $.post("/tweets", serializedData, (response) => {
-                //console.log("before calling");
+                
                 loadTweets();
                 $("#tweet-text").val("");
 
@@ -103,33 +101,8 @@ $(() => { // same as $(document).ready(() => {})
         }
         
     })
-
-
-
-
-
-    /*The loadTweets function is defined here: It is an ajax GET request and takes the tweets as a JSON object and places them in the body of the response*/
-
     
 
-    // const charCount = $(this).find("textarea")[0].value.length;
-    // if (charCount === 0) {
-    //     console.log($('#error') + "You need letters to tweet");
-    // } else if (charCount > 140){
-    //     console.log($('error') + "Too many letters");
-    // } else {
-    //     $.ajax({
-    //         url:'/tweets',
-    //         method:'POST',
-    //         data: $(this).serialize(), 
-    //         success: () => {
-    //           $('.new-tweet').val('');
-              
-    //           $('.counter').text('140');
-    //           loadTweets();  
-    //         }    
-    //       });
-
-    // }
+    
 
 });  
