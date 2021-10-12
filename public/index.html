@@ -35,11 +35,11 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="nav-bar">      
       <span>tweeter</span>
-      <div class="Hello"> 
-        <span><span id="write">Write</span> a new Tweet </span> 
-        <span><i class=" fas fa-angle-double-down"></color></i></span>
+      <div class="nav-text"> 
+        <p><span id="write">Write</span> a new Tweet </p> 
+        <i class="fas fa-angle-double-down icon"></i>
       </div>
     </nav>
    <header class="nav-header">
@@ -48,7 +48,7 @@
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
+      <!-- <br> -->
       <div>
           <h2>Manjula</h2>
       </div>
@@ -68,17 +68,14 @@
           <label for="tweet-text">What are you humming about?</label>
           
           <textarea name="text" id="tweet-text"></textarea>
-          <div class="Tweet">
+          <div class="submit-tweet">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
             
           </div>
         </form>
-        <section id="tweets-container">
-      
-        
-        </section>
       </section>
+      <section id="tweets-container"></section>
     </main>
       
 

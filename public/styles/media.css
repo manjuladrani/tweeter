@@ -6,30 +6,30 @@
         justify-content: start;
         width: 100%;
         align-items: center; 
+        /* padding-top: 150px; */
      }
 
      
-    header {
+     .nav-header {
       width: 100%;
-      top: 0;
-      height: 200px;
+      /* height: 200px; */
       padding: 5px;
-      padding-top: 0px;
+      padding-top: 10px;
       margin-left: 0;
-      display: flex;
-      flex-wrap: wrap;
+      /* display: flex;
+      flex-wrap: wrap; */
     }
     
 
     
-    container {
+    .container {
         margin: 2px;
         padding-left: 3em;
         width: 100%;
 
     }
     
-     nav {
+     .nav-bar {
       
       background: #DAA520;
       background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");

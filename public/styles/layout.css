@@ -24,13 +24,13 @@ html {
 }
 
 
-main.container {
-  display: flex;
+.container {
+  /* display: flex; */
   font-style: normal;
   font-family: 'Source Sans Pro', sans-serif;
   padding-right: 2em;
   padding-left: 2em;
-  width: 90%;
+  width: 60%;
   margin: auto;
   padding-bottom: 20px;
 }

@@ -12,7 +12,7 @@ $(() => { // same as $(document).ready(() => {})
     /*The loadTweets function is defined here: It is an ajax GET request and takes the tweets as a JSON object and places them in the body of the response*/
 
     function loadTweets() {
-        console.log("inside load tweets");
+        //console.log("inside load tweets");
         $.ajax({
             url: '/tweets',
             method: 'GET',
@@ -25,7 +25,7 @@ $(() => { // same as $(document).ready(() => {})
         })
     }
     loadTweets();
-    
+    $("#error").hide();
 
 
     /* The CreateTweetElement function is defined here: takes the body of the tweet from the form and renders it to the tweet container*/
@@ -77,7 +77,7 @@ $(() => { // same as $(document).ready(() => {})
     /* tweet form submission */ 
     
     $("#tweet-form").submit(function (event) {
-        console.log('event');
+        //console.log('event');
         event.preventDefault();
         let charCount = $("#tweet-text").val().length;
         if (charCount === 0) {
@@ -89,7 +89,7 @@ $(() => { // same as $(document).ready(() => {})
             $("#error").slideDown();
             
         } else {
-            console.log($( this ).serialize());
+            //console.log($( this ).serialize());
             const serializedData = $(this).serialize();
 
             $.post("/tweets", serializedData, (response) => {
