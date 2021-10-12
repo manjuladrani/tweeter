@@ -1,6 +1,6 @@
 
 nav {
-    height: 120px;
+    height: 125px;
     color: #FFFFFF;
     font-size: larger;
     background-color: #4056A1;
@@ -22,11 +22,13 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
 }
 #write {
     font-family:'Source Sans Pro';
     font-weight: bold;
 }
 .icon {
-    font-size: large;
+    font-size: medium;
+    padding-bottom: 50px;
 }
