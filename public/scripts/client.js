@@ -77,7 +77,7 @@ $(() => { // same as $(document).ready(() => {})
     /* tweet form submission */ 
     
     $("#tweet-form").submit(function (event) {
-        //console.log('event');
+        
         event.preventDefault();
         let charCount = $("#tweet-text").val().length;
         if (charCount === 0) {
