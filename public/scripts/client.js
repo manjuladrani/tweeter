@@ -25,7 +25,7 @@ $(() => { // same as $(document).ready(() => {})
         })
     }
     loadTweets();
-    $("#error").hide();
+    
 
 
     /* The CreateTweetElement function is defined here: takes the body of the tweet from the form and renders it to the tweet container*/
@@ -98,6 +98,10 @@ $(() => { // same as $(document).ready(() => {})
                 $("#tweet-text").val("");
 
             });
+        }
+        if(charCount > 0 && charCount < 140) {
+          $(".displayerror").text("");
+          $("#error").hide();
         }
         
     })

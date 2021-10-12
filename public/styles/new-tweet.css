@@ -14,10 +14,11 @@ form {
   resize: none;
   outline: none;
   border-bottom: 2px solid black;
+  padding: 5px;
 
 }
 .Tweet {
-    margin-top: 10px;
+    margin-top: 5px;
     font-family: 'Bungee', cursive;
     
 }
